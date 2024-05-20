@@ -1,0 +1,225 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	margin:0px;
+	padding: 0px;
+	background-color: #FFFFFF;
+	font-family: calibri;
+}
+a{
+	text-decoration:none;
+}
+.services{
+	width:100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.service-heading{
+	text-align:center;
+}
+.service-heading h1{
+	color:#576975;
+	font-size: 3rem;
+	font-weight: 400;
+	letter-spacing: 1px;
+	margin: 0px;
+}
+.service-heading p{
+	color: rgba(87,105,117,0.60);
+	font-size: 1rem;
+	margin: 5px;
+	text-align: center;
+}
+.service-box-container{
+	width:100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.service-box{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	width:300px;
+	padding: 20px 25px;
+	height: 400px;
+	box-sizing: border-box;
+	margin: 30px;
+	position: relative;
+}
+.service-box img{
+	width: 100%;
+}
+.service-box h1{
+	color:#576975;
+	letter-spacing: 1px;
+	font-size: 20px;
+	margin-bottom: 8px;
+    align-items: center;
+	
+}
+.service-box p{
+	color: rgba(87,105,117,0.90);
+	text-align: center;
+}
+.service-btn{
+	width: 140px;
+	height: 40px;
+	border-radius: 20px;
+	border:1px solid rgba(74,144,226,0.50);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color:#576975;
+	margin-top:10px; 
+}
+.bar{
+	width: 100px;
+	height: 6px;
+	position: absolute;
+	left: 50%;
+	top: 0%;
+	transform: translateX(-50%);
+	background-color:#4a90e2; 
+	border-radius: 0px 0px 10px 10px;
+	display: none;
+	animation: bar 0.5s;
+}
+.service-box:hover{
+	box-shadow: 2px 2px 30px rgba(0,0,0,0.08);
+	transition: all ease 0.3s;
+}
+.service-btn:hover{
+	background-color:#4a90e2;
+	border: 1px solid #4a90e2;
+	color:#FFFFFF;
+	transition: all ease 0.3s;
+}
+.service-box:hover .bar{
+	display: block;
+}
+@keyframes bar{
+	0%{
+		width:0px;
+	}
+	100%{
+		width:100px;
+	}
+}
+/* main servive section start */
+.containerr {
+    width: 90%;
+    margin: 0 auto; 
+    
+}
+.inner {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+.inner .common__inner img{
+    width: 100%;
+    
+}
+.inner .common__inner {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    box-sizing: border-box;
+}
+.inner .inner1 {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+/* .inner .inner2 {
+    
+} */
+.inner .inner3 {
+   border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.inner .inner1 .img, .inner .inner2 .img, .inner .inner3 .img {
+    height: 65px;
+}
+.inner .inner1 .title, .inner .inner2 .title, .inner .inner3 .title {
+    color: rgb(20, 19, 19);
+    font-size: 22px;
+    font-family: system-ui;
+    height: 50px;
+}
+.inner .inner1 .desc, .inner .inner2 .desc, .inner .inner3 .desc {
+    color: #0b0b0bbf;
+    font-size: 15px;
+    font-family: system-ui;
+    height: 160px;
+    line-height: 23px;
+}
+.inner .inner1 .button, .inner .inner2 .button, .inner .inner3 .button {
+    height: calc(100% - 275px);
+}
+.inner .button button, .inner .inner2 .button button, .inner .inner3 .button button {
+    background: rgb(248, 242, 242);
+    border: 1px solid #25bcf4;
+    padding: 13px 27px;
+    border-radius: 20px;
+    color: #25bcf4;
+    font-family: system-ui;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .containerr {
+        width: 90%;
+        margin: 100px auto;
+        position: unset;
+        top: unset;
+        left: unset;
+        transform: unset;
+    }
+    .inner {
+        flex-direction: column;
+    }
+    .inner .common__inner {
+        width: 100%;
+        padding: 55px;
+    }
+    .inner .inner1 {
+        border-bottom-left-radius: unset;
+        border-top-right-radius: 8px;
+    }
+    .inner .inner3 {
+        border-bottom-left-radius: 8px;
+        border-top-right-radius: unset;
+    }
+}
+
+
+
+
+@media(max-width:1050px){
+	.service-box-container{
+		flex-wrap: wrap;
+		
+	}	
+	.services{
+		height: auto;
+	}
+	.service-heading{
+		margin: 15px;
+	}
+	.service-box{
+		flex-grow: 1;
+	}
+	
+}
+
